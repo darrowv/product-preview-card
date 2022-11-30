@@ -1,5 +1,10 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+* {
   margin: 0;
   padding: 0;
 }
@@ -9,11 +14,12 @@ html {
   font-family: "Montserrat";
 }
 
-h1, h2 {
+h1 {
   font-family: "Fraunces";
 }
 
 img {
+  display: block;
   width: 100%;
 }
 
@@ -47,7 +53,7 @@ img {
 .card__info__title {
   color: hsl(228deg, 12%, 48%);
   text-transform: uppercase;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.2rem;
 }
 .card__info__header {
   line-height: 2rem;
@@ -58,10 +64,10 @@ img {
 }
 .card__info .card__price {
   display: flex;
-  justify-content: space-between;
 }
 .card__info .card__price__current {
   color: hsl(158deg, 36%, 37%);
+  margin-right: 1em;
 }
 .card__info .card__price__old {
   color: hsl(228deg, 12%, 48%);
@@ -87,6 +93,34 @@ img {
 }
 .card__info .card__btn:hover {
   background-color: hsl(159deg, 30%, 21%);
+}
+@media (max-width: 600px) {
+  .card {
+    width: 450px;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 500px) {
+  .card {
+    width: 90%;
+    height: 90%;
+    font-size: 1.1rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card__img__container {
+    width: auto;
+    height: 45%;
+  }
+  .card__info {
+    width: auto;
+    height: 55%;
+    justify-content: center;
+    gap: 1.8rem;
+  }
+  .card__img__container img {
+    object-fit: cover;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

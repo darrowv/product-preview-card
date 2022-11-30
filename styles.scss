@@ -7,8 +7,13 @@ $dark-grayish-blue: hsl(228, 12%, 48%);
 $bold: 700;
 $light: 500;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+* {
   margin: 0;
   padding: 0;
 }
@@ -18,11 +23,12 @@ html {
   font-family: "Montserrat";
 }
 
-h1, h2 {
+h1 {
   font-family: "Fraunces";
 }
 
 img {
+  display: block;
   width: 100%;
 }
 
@@ -40,11 +46,9 @@ img {
   display: flex;
   overflow: hidden;
 
-  
-
   &__img__container {
     width: 50%;
-    
+
     img {
       height: 100%;
     }
@@ -60,7 +64,7 @@ img {
     &__title {
       color: $dark-grayish-blue;
       text-transform: uppercase;
-      letter-spacing: .25rem;
+      letter-spacing: 0.2rem;
     }
 
     &__header {
@@ -74,10 +78,10 @@ img {
 
     .card__price {
       display: flex;
-      justify-content: space-between;
 
       &__current {
         color: $dark-cyan;
+        margin-right: 1em;
       }
 
       &__old {
@@ -107,6 +111,40 @@ img {
 
       &:hover {
         background-color: $very-dark-cyan;
+      }
+    }
+  }
+
+  // responsiveness
+
+  @media (max-width: 600px) {
+    width: 450px;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 500px) {
+    width: 90%;
+    height: 90%;
+    font-size: 1.1rem;
+
+    flex-direction: column;
+    justify-content: center;
+
+    &__img__container {
+      width: auto;
+      height: 45%;
+    }
+
+    &__info {
+      width: auto;
+      height: 55%;
+      justify-content: center;
+      gap: 1.8rem;
+    }
+
+    &__img__container {
+      img {
+        object-fit: cover;
       }
     }
   }
