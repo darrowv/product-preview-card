@@ -1,0 +1,92 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Montserrat";
+}
+
+h1, h2 {
+  font-family: "Fraunces";
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  height: 100vh;
+  background-color: hsl(30deg, 38%, 92%);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+}
+.card__img__container {
+  width: 50%;
+}
+.card__img__container img {
+  height: 100%;
+}
+.card__info {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card__info__title {
+  color: hsl(228deg, 12%, 48%);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+.card__info__header {
+  line-height: 2rem;
+  color: hsl(212deg, 21%, 14%);
+}
+.card__info__description {
+  color: hsl(228deg, 12%, 48%);
+}
+.card__info .card__price {
+  display: flex;
+  justify-content: space-between;
+}
+.card__info .card__price__current {
+  color: hsl(158deg, 36%, 37%);
+}
+.card__info .card__price__old {
+  color: hsl(228deg, 12%, 48%);
+  align-self: center;
+  margin-right: 1rem;
+}
+.card__info .card__btn {
+  height: 3rem;
+  border: none;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(158deg, 36%, 37%);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.1s;
+}
+.card__info .card__btn img {
+  width: auto;
+  margin-right: 0.5rem;
+}
+.card__info .card__btn:hover {
+  background-color: hsl(159deg, 30%, 21%);
+}
+
+/*# sourceMappingURL=styles.css.map */

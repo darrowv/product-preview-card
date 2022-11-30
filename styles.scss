@@ -1,0 +1,113 @@
+$dark-cyan: hsl(158, 36%, 37%);
+$very-dark-cyan: hsl(159, 30%, 21%);
+$cream: hsl(30, 38%, 92%);
+$very-dark-blue: hsl(212, 21%, 14%);
+$dark-grayish-blue: hsl(228, 12%, 48%);
+
+$bold: 700;
+$light: 500;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Montserrat";
+}
+
+h1, h2 {
+  font-family: "Fraunces";
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  height: 100vh;
+  background-color: $cream;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+
+  
+
+  &__img__container {
+    width: 50%;
+    
+    img {
+      height: 100%;
+    }
+  }
+
+  &__info {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+      color: $dark-grayish-blue;
+      text-transform: uppercase;
+      letter-spacing: .25rem;
+    }
+
+    &__header {
+      line-height: 2rem;
+      color: $very-dark-blue;
+    }
+
+    &__description {
+      color: $dark-grayish-blue;
+    }
+
+    .card__price {
+      display: flex;
+      justify-content: space-between;
+
+      &__current {
+        color: $dark-cyan;
+      }
+
+      &__old {
+        color: $dark-grayish-blue;
+        align-self: center;
+        margin-right: 1rem;
+      }
+    }
+
+    .card__btn {
+      height: 3rem;
+      border: none;
+      border-radius: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $dark-cyan;
+      color: white;
+      cursor: pointer;
+      font-weight: $bold;
+      transition: 0.1s;
+
+      img {
+        width: auto;
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        background-color: $very-dark-cyan;
+      }
+    }
+  }
+}
