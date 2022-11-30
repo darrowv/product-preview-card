@@ -115,8 +115,6 @@ img {
   .card__info {
     width: auto;
     height: 55%;
-    justify-content: center;
-    gap: 1.8rem;
   }
   .card__img__container img {
     object-fit: cover;
